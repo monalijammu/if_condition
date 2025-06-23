@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>range</title>
+    <style>
+        .range{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="range">
+        <h2>Check if a number is in the range 10 to 20</h2>
+        <label for="range">Enter a number:</label>
+        <input type="number" id="numberInput">
+        <button type="submit" onclick="demo()">Check</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function demo(){
+            let range = document.getElementById("numberInput").value;
+            let resultInput = "";
+
+            if(range >= 10 && range <=20){
+                resultInput = "The number is in the range";
+            } else {
+                resultInput = "Then number should be between 10 and 20."
+            }
+            document.getElementById("result").innerHTML=resultInput;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prime Check</title>
+  <style>
+    .prime {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="prime">
+    <h2>Check if a number is prime</h2>
+    <label>Enter a number:</label>
+    <input type="number" id="numberInput">
+    <button onclick="demo()">Check</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function demo() {
+      let num = parseInt(document.getElementById("numberInput").value);
+      let result = "";
+
+      if (num <= 1) {
+        result = "Not a prime number.";
+      } else {
+        let isPrime = true;
+
+        // Check from 2 to num - 1
+        for (let i = 2; i < num; i++) {
+          if (num % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+
+        if (isPrime) {
+          result = num + " is a prime number.";
+        } else {
+          result = num + " is not a prime number.";
+        }
+      }
+
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>

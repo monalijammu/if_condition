@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check the number if it is positive or negative</title>
+    <style>
+        .number{
+            text-align: center;
+        }
+        #result{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3 style="text-align: center;">Check it the number is positive or negative.</h3>
+    <div class="number">
+        <label for="number">Enter a number:</label>
+        <input type="number" id="numberInput">
+        <button type="button" onclick="demo()">Submit</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function demo(){
+          let num = parseFloat(document.getElementById("numberInput").value);
+          let resultText="";
+          if(num > 0){
+           resultText = "The number is a positive number.";
+          } else if(num < 0){
+            resultText = "The number is negative.";
+          } else {
+            resultText = "The number is zero.";
+          }
+
+          document.getElementById("result").innerText = resultText;
+        }
+    </script>
+</body>
+</html>

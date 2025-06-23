@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upper/lower</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Check if a character is uppercase or lowercase</h2>
+    <label for="text">Enter a character:</label>
+    <input type="text" id="textInput">
+    <button type="submit" onclick="demo()">Submit</button>
+    <p id="result"></p>
+</body>
+
+<script>
+    function demo(){
+        let text = document.getElementById("textInput").value;
+        let resultInput = "";
+
+        if(text === text.toUpperCase()){
+            resultInput = "It's Uppercase.";
+        } else {
+            resultInput="It's LowerCase.";
+        }
+        document.getElementById("result").innerHTML=resultInput;
+    }
+</script>
+</html>

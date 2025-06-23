@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty String</title>
+    <style>
+        .empty{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="empty">
+        <h2>Check if a string is empty</h2>
+        <label for = "string">Enter a string:</label>
+        <input type="text" id="textInput">
+        <button type="submit" onclick="demo()">Check</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function demo(){
+            let text = document.getElementById("textInput").value;
+            if (text === ""){
+                document.getElementById("result").innerHTML="The string is empty.";
+            } else {
+                document.getElementById("result").innerHTML= "The string is not empty.";
+            }
+        }
+    </script>
+</body>
+</html>

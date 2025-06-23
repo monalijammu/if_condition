@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels</title>
+    <style>
+        .vowel{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="vowel">
+    <h3>Check if a Alphabet is a vowel or not</h3>
+    <label for="letter">Enter a Alphabet:</label>
+    <input type="text" id="textInput">
+    <button type="submit" onclick="demo()">Check</button>
+    <p id="result"></p>
+    </div>
+
+    <script>
+        function demo(){
+            let text = document.getElementById("textInput").value;
+            let resultText = "";
+
+            if(text === "a" || text === "e" || text === "i" || text === "o" || text === "u"){
+               resultText = text + " is a vowel.";
+            } else {
+                resultText = text + " is not a vowel.";
+            }
+              document.getElementById("result").innerHTML=resultText;
+        }
+    </script>
+</body>
+</html>

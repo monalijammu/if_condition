@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligibilty</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>Check if a person is eligible to vote or not</h3>
+    <div class="vote">
+        <label for = "vote">Enter a Number</label>
+        <input type = "number" id="numberInput"><br> <br>
+        <button type="button" onclick="demo()">Check Eligibilty</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function demo(){
+            let num = parseFloat(document.getElementById("numberInput").value);
+            let resultValue = "";
+            if (num >= 18){
+                resultValue = "You are Eligible to Vote";
+            }else {
+                resultValue = "You are not Eligible to Vote";
+            }
+            document.getElementById("result").innerHTML=resultValue;
+        }
+    </script>
+</body>
+</html>

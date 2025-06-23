@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle</title>
+    <style>
+        .triangle{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="triangle">
+        <h2>Check if three numbers can form a triangle</h2>
+        <label for="triangle">1st:</label>
+        <input type = "number" id="numberInput1">
+        <label for="triangle">2nd:</label>
+        <input type = "number" id="numberInput2">
+        <label for="triangle">3rd:</label>
+        <input type = "number" id="numberInput3"> <br><br>
+        <button type="submit" onclick="demo()">Check</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function demo() {
+          let a = parseFloat(document.getElementById("numberInput1").value);
+           let b = parseFloat(document.getElementById("numberInput2").value);
+            let c = parseFloat(document.getElementById("numberInput3").value);
+
+            if (a + b > c && a + c > b && b + c > a){
+                document.getElementById("result").innerHTML = "Yes, these numbers can form a triangle.";
+            } else {
+                document.getElementById("result").innerHTML = "No, these numbers cannot form a triangle.";
+            }
+        }
+    </script>
+</body>
+</html>

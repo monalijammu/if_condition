@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap_year</title>
+    <style>
+        .year{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="year">
+        <h2>Check if a year is a leap year</h2>
+        <label for="year">Enter a year:</label>
+        <input type="number" id="numberInput">
+        <button type="submit" onclick="demo()">Check</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function demo(){
+            let year = document.getElementById("numberInput").value;
+            let resultInput = "";
+            if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)){
+                resultInput = "The year " + year + " is a leap year.";
+            } else {
+                resultInput = "The year " + year + " is not a leap year.";
+            } 
+            document.getElementById("result").innerHTML=resultInput;
+        }
+    </script>
+</body>
+</html>
